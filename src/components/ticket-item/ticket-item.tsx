@@ -6,7 +6,7 @@ import {
     DivFlyInfo,
     DivMargin,
     DivFlexInfo,
-    DivFlexColumn, DivFlyTime, DivFlexRow, DivFlying
+    DivFlexColumn, DivFlyTime, DivFlexRow, DivFlying, DivFlyTransfers
 } from "./ticket-item-style";
 import {Tickets} from "../../avia-tickets-types";
 import moment from "moment";
@@ -29,7 +29,7 @@ const TicketItem = ({ticket}: TicketItemProps) => {
                     {ticket.price}
                 </DivPrices>
                 <DivPrices>
-                    <img src={`https://pics.avs.io/99/36/${ticket.carrier}.png`} alt={"logo"}/>
+                    <img src={`https://pics.avs.io/99/36/${ticket.carrier}.png`} alt={"logo"} style={{width:'80px'}}/>
                 </DivPrices>
             </DivFlex>
             <DivInfo>
@@ -47,13 +47,13 @@ const TicketItem = ({ticket}: TicketItemProps) => {
                                     {getHourAndMin(value.date)}
                                 </DivFlexInfo>
                                 <DivFlyTime>
-                                    <div style={{marginBottom: '5px'}}>
+                                    <div>
                                         В пути
                                     </div>
                                     <DivFlying>{Math.floor(value.duration / 60)}ч{' ' + value.duration % 60}м</DivFlying>
                                 </DivFlyTime>
-                                <DivFlyTime>
-                                    <div style={{marginBottom: '5px'}}>
+                                <DivFlyTransfers>
+                                    <div>
                                         Количество пересадок
                                     </div>
                                     <DivFlexRow>
@@ -61,7 +61,7 @@ const TicketItem = ({ticket}: TicketItemProps) => {
                                             <DivFlexRow
                                                 style={{marginLeft: i == 0 ? '0px' : '5px'}}>{str + (i != (arr.length - 1) ? ', ' : '')} </DivFlexRow>) : 'Прямой рейс'}
                                     </DivFlexRow>
-                                </DivFlyTime>
+                                </DivFlyTransfers>
                             </DivFlexColumn>
                         )
                     }

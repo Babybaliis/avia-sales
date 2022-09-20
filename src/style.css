@@ -9,14 +9,14 @@ body {
 }
 
 .ant-tabs-tab:first-child {
-    border: 1px solid #dfe5ec ;
-    border-top-left-radius: 10px ;
-    border-bottom-left-radius: 10px ;
+    border: 1px solid #dfe5ec;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .ant-tabs-tab {
-    border: 1px solid #dfe5ec ;
-    background: white ;
+    border: 1px solid #dfe5ec;
+    background: white;
     padding: 15px;
     color: #4a4a4a;
     font-size: 14px;
@@ -31,23 +31,59 @@ body {
 }
 
 .ant-tabs-tab:nth-last-child(2) {
-    border: 1px solid #dfe5ec ;
-    border-top-right-radius: 10px ;
-    border-bottom-right-radius: 10px ;
+    border: 1px solid #dfe5ec;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 
-.ant-tabs-tab.ant-tabs-tab-active{
+.ant-tabs-tab.ant-tabs-tab-active {
     background: #2196f3 !important;
 
 }
-.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
     color: white !important;
 }
+
 .ant-tabs-tab + .ant-tabs-tab {
     margin: 0;
 }
 
 .ant-tabs-top > .ant-tabs-nav .ant-tabs-ink-bar, .ant-tabs-top > .ant-tabs-nav:before, .ant-tabs-top > div > .ant-tabs-nav .ant-tabs-ink-bar, .ant-tabs-top > div > .ant-tabs-nav:before {
     display: none;
+}
+
+@media  (max-width: 660px) {
+    .ant-tabs-nav-list{
+        max-width: 400px;
+        width: 100%;
+    }
+    .ant-tabs-tab-btn {
+        font-size: 8px;
+
+    }
+    .ant-tabs{
+        max-width: 300px;
+        width: 100%;
+    }
+    .ant-tabs-tab{
+        padding: 15px 7px 15px 11px;
+    }
+}
+
+@media  (max-width: 430px) {
+    .ant-tabs-tab-btn {
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 380px) {
+    .ant-tabs-tab-btn {
+        font-size: 6px;
+    }
+
+    .ant-tabs-tab{
+        padding: 4px;
+    }
 }

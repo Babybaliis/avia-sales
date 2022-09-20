@@ -76,7 +76,7 @@ const App = () => {
         <Section>
             <ImgLogo src={logo} alt={'logo'}/>
             <DivTable>
-                <TicketFilter filters={flyingSort}/>
+                <TicketFilter filters={flyingSort} setFilters={setFlyingSort}/>
                 <Tabss defaultActiveKey="1" centered>
                     <TabPane tab="Самый дешевый" key="1" >
                         <Tabs tabs={tabsSort}

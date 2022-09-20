@@ -5,6 +5,23 @@ export const Section = styled.section`
   margin: 0 auto;
   max-width: 960px;
   width: 100%;
+  @media(max-width:660px) {
+    font-size: 10px;
+    max-width: 450px;
+    width: 100%;
+  }
+  @media (max-width: 430px) {
+  font-size: 10px;
+  max-width: 325px;
+  width: 100%;
+} 
+  @media (max-width: 380px) {
+  font-size: 10px;
+  max-width: 290px;
+  width: 100%;
+}
+  
+  
 `;
 
 export const ImgLogo = styled.img`
@@ -15,10 +32,12 @@ export const ImgLogo = styled.img`
 
 export const DivTable = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: baseline;
   margin: 0 auto;
   max-width: 790px;
   padding-bottom: 50px;
-  padding-left: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
   width: 100%;
 `;
