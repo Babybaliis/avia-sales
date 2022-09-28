@@ -73,7 +73,7 @@ body {
 }
 
 .ant-spin-spinning {
-    margin: 36.5%;
+    margin: 15.5% 36.5% 15.5% 36.5%;
 }
 
 @media  (max-width: 660px) {

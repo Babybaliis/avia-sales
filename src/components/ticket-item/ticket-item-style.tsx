@@ -26,18 +26,18 @@ export const DivFlex = styled.div`
   @media (max-width: 430px) {
     padding: 20px 10px 20px 10px;
   }
-`
+`;
 
 export const DivPrices = styled.div`
   display: flex;
-  color: #2196F3;
+  color: #2196f3;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   @media (max-width: 673px) {
     font-size: 18px;
   }
-`
+`;
 
 export const DivInfo = styled.div`
   display: flex;
@@ -50,14 +50,14 @@ export const DivInfo = styled.div`
   @media (max-width: 430px) {
     padding: 10px 10px 20px 10px;
   }
-`
+`;
 
 export const DivFlexColumn = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start
-`
+  align-items: flex-start;
+`;
 
 export const DivFlexInfo = styled.div`
   display: flex;
@@ -74,11 +74,11 @@ export const DivFlexInfo = styled.div`
   @media (max-width: 430px) {
     font-size: 9px;
   }
-  
+
   @media (max-width: 380px) {
     font-size: 7px;
   }
-`
+`;
 
 export const DivFlyInfo = styled.div`
   display: flex;
@@ -95,7 +95,7 @@ export const DivFlyInfo = styled.div`
   @media (max-width: 380px) {
     font-size: 7px;
   }
-`
+`;
 
 export const DivMargin = styled.div`
   margin: 0 5px 0 5px;
@@ -107,7 +107,7 @@ export const DivMargin = styled.div`
   &:last-child {
     margin-right: 0;
   }
-`
+`;
 
 export const DivFlyTime = styled.div`
   display: flex;
@@ -127,7 +127,7 @@ export const DivFlyTime = styled.div`
   @media (max-width: 380px) {
     font-size: 7px;
   }
-`
+`;
 
 export const DivFlyTransfers = styled.div`
   display: flex;
@@ -147,7 +147,7 @@ export const DivFlyTransfers = styled.div`
   @media (max-width: 380px) {
     font-size: 7px;
   }
-`
+`;
 
 export const DivFlying = styled.div`
   color: rgba(74, 74, 74, 1);
@@ -167,7 +167,7 @@ export const DivFlying = styled.div`
   @media (max-width: 380px) {
     font-size: 7px;
   }
-`
+`;
 
 export const DivFlexRow = styled.div`
   display: flex;
@@ -186,7 +186,4 @@ export const DivFlexRow = styled.div`
   @media (max-width: 380px) {
     font-size: 7px;
   }
-`
-
-
-
+`;

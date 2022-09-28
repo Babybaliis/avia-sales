@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import {App} from "./components/app/app";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { App } from "./components/app/app";
 
-import {Provider} from "react-redux";
-import {setupStore} from "./store";
+import { Provider } from "react-redux";
+import { setupStore } from "./store";
 
-const store=setupStore()
+const store = setupStore();
 
 const root = ReactDOM.createRoot(
-    document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
-    <Provider store={store}>
-        <App />
-    </Provider>
+  <Provider store={store}>
+    <App />
+  </Provider>
 );
