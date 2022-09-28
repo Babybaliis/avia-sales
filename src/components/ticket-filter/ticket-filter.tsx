@@ -1,13 +1,14 @@
 import React from "react";
 import {DivFilter, InputFilter, DivCheckbox, H5} from "./ticket-filter-style";
 import {Filter} from "../../avia-tickets-types";
+import {ticketSlice, useAppDispatch, useAppSelector} from "../../store/hooks";
 
-interface TicketFilterProps {
-    filters: Filter[]
-    setFilters: (filters: Filter[]) => void
-}
 
-const TicketFilter = ({filters, setFilters}: TicketFilterProps) => {
+
+const TicketFilter = () => {
+    const {onClick} = ticketSlice.actions
+    const dispatch = useAppDispatch()
+    const {filters} = useAppSelector(state => state.ticketsReducer)
 
     return (
         <DivFilter>
@@ -16,14 +17,7 @@ const TicketFilter = ({filters, setFilters}: TicketFilterProps) => {
                 <DivCheckbox key={'filter_input_' + filter.id}>
                     <InputFilter type={"checkbox"}
                                  checked={filter.done}
-                                 onClick={(e) => {
-                                     setFilters(filters.map(value => {
-                                         if (value.id === filter.id) {
-                                             value.done = !filter.done
-                                         }
-                                         return value
-                                     }))
-                                 }}
+                                 onClick={(e) => dispatch(onClick(filter))}
                     />
                     {filter.label}
                 </DivCheckbox>

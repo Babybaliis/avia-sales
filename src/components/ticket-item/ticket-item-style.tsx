@@ -9,6 +9,11 @@ export const Section = styled.section`
   max-width: 502px;
   font-family: 'Open Sans', sans-serif;
   width: 100%;
+  opacity: 0;
+  animation: ani 1.5s forwards;
+  @keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 `;
 
 export const DivFlex = styled.div`
@@ -151,7 +156,7 @@ export const DivFlying = styled.div`
   font-size: 17px;
   font-style: normal;
   font-weight: 550;
-  width: 120px;
+  width: 80px;
   @media (max-width: 673px) {
     width: 50px;
     font-size: 10px;

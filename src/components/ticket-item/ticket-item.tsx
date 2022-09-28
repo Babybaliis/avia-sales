@@ -1,14 +1,18 @@
 import {
-    Section,
     DivFlex,
-    DivPrices,
-    DivInfo,
-    DivFlyInfo,
-    DivMargin,
+    DivFlexColumn,
     DivFlexInfo,
-    DivFlexColumn, DivFlyTime, DivFlexRow, DivFlying, DivFlyTransfers
+    DivFlexRow,
+    DivFlyInfo,
+    DivFlying,
+    DivFlyTime,
+    DivFlyTransfers,
+    DivInfo,
+    DivMargin,
+    DivPrices,
+    Section
 } from "./ticket-item-style";
-import {Tickets} from "../../avia-tickets-types";
+import {Segment, Tickets} from "../../avia-tickets-types";
 import moment from "moment";
 
 
@@ -22,6 +26,26 @@ const TicketItem = ({ticket}: TicketItemProps) => {
         return moment(d).format('HH:mm')
     }
 
+    const finishHoursMin = (date: string, finishTime: number) => {
+        let d = new Date(date)
+        return moment(d.getTime() + finishTime * 60000).format('HH:mm')
+    }
+
+    const finishFlying = (value: Segment) => {
+        return Math.floor((value.duration / 60)) + 'ч' + (' ' + value.duration % 60) + 'м'
+    }
+
+    const getTransfers = (value: Segment) => {
+        if (value.stops.length === 0) {
+            return '0 пересадок'
+        } else if (value.stops.length === 1) {
+            return '1 пересадка'
+        } else{
+            return value.stops.length +' пересадки'
+        }
+
+    }
+
     return (
         <Section>
             <DivFlex>
@@ -29,7 +53,7 @@ const TicketItem = ({ticket}: TicketItemProps) => {
                     {ticket.price}
                 </DivPrices>
                 <DivPrices>
-                    <img src={`https://pics.avs.io/99/36/${ticket.carrier}.png`} alt={"logo"} style={{width:'80px'}}/>
+                    <img src={`https://pics.avs.io/99/36/${ticket.carrier}.png`} alt={"logo"} style={{width: '80px'}}/>
                 </DivPrices>
             </DivFlex>
             <DivInfo>
@@ -41,20 +65,19 @@ const TicketItem = ({ticket}: TicketItemProps) => {
                                         <DivMargin>{value.origin} </DivMargin>
                                         -
                                         <DivMargin>{value.destination}</DivMargin>
-
                                     </DivFlyInfo>
-
-                                    {getHourAndMin(value.date)}
+                                    {getHourAndMin(value.date) + ' ' + '-' + ' ' + finishHoursMin(value.date, value.duration)}
                                 </DivFlexInfo>
                                 <DivFlyTime>
                                     <div>
                                         В пути
                                     </div>
-                                    <DivFlying>{Math.floor(value.duration / 60)}ч{' ' + value.duration % 60}м</DivFlying>
+                                    <DivFlying> {finishFlying(value)}
+                                    </DivFlying>
                                 </DivFlyTime>
                                 <DivFlyTransfers>
                                     <div>
-                                        Количество пересадок
+                                        {getTransfers(value)}
                                     </div>
                                     <DivFlexRow>
                                         {(value.stops.length > 0) ? value.stops.map((str, i, arr) =>

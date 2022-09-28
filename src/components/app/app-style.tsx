@@ -20,9 +20,7 @@ export const Section = styled.section`
   max-width: 290px;
   width: 100%;
 }
-  
-  
-`;
+`
 
 export const ImgLogo = styled.img`
   display: block;
@@ -40,4 +38,4 @@ export const DivTable = styled.div`
   padding-left: 30px;
   padding-right: 30px;
   width: 100%;
-`;
+`

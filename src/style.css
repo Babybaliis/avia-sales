@@ -54,6 +54,28 @@ body {
     display: none;
 }
 
+.ant-spin-lg .ant-spin-dot i {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.ant-spin-lg .ant-spin-dot {
+    font-size: 126px !important;
+}
+
+.ant-spin-dot-spin {
+    animation: antRotate 1.6s infinite linear !important;
+}
+
+.ant-rate {
+    bottom: 15px;
+    position: absolute;
+}
+
+.ant-spin-spinning {
+    margin: 36.5%;
+}
+
 @media  (max-width: 660px) {
     .ant-tabs-nav-list{
         max-width: 400px;
