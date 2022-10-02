@@ -2,6 +2,7 @@ export type Filter = {
   label: string;
   id: number;
   done: boolean;
+  stopCount:number;
 };
 
 export type Tab = {

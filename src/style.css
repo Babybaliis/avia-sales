@@ -4,8 +4,15 @@ body {
 }
 
 .and-tabs {
-    width: 502px;
-    height: 50px;
+    max-width: 660px !important;
+    width: 100% !important;
+    height: 50px !important;
+}
+
+.ant-tabs-nav {
+    max-width: 660px;
+    width: 100%;
+    height: auto;
 }
 
 .ant-tabs-tab:first-child {

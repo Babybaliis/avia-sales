@@ -24,8 +24,8 @@ export const Section = styled.section`
 
 export const ImgLogo = styled.img`
   display: block;
-  margin: 0 auto 50px;
-  padding-top: 50px;
+  margin: 0 auto 10px;
+  padding-top: 10px;
 `;
 
 export const DivTable = styled.div`

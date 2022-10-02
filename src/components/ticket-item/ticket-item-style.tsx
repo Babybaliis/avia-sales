@@ -6,7 +6,7 @@ export const Section = styled.section`
   margin-bottom: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px #c6c5c57d;
-  max-width: 502px;
+  max-width: 660px;
   font-family: 'Open Sans', sans-serif;
   width: 100%;
   opacity: 0;
